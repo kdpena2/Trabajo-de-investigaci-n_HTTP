@@ -1,0 +1,286 @@
+[
+    {
+        "id": "6c31748d.f5062c",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "6dc8379e.fdc1c8",
+        "type": "http in",
+        "z": "6c31748d.f5062c",
+        "name": "",
+        "url": "test",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 160,
+        "wires": [
+            [
+                "81a4763f.afcc68",
+                "c91f33ac.c03c9"
+            ]
+        ]
+    },
+    {
+        "id": "81a4763f.afcc68",
+        "type": "debug",
+        "z": "6c31748d.f5062c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 490,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "cbeea803.5b8b08",
+        "type": "ui_text",
+        "z": "6c31748d.f5062c",
+        "group": "7e3538ea.9f6a18",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "text",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 510,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "c91f33ac.c03c9",
+        "type": "function",
+        "z": "6c31748d.f5062c",
+        "name": "",
+        "func": "msg.payload= msg.payload.name\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 340,
+        "y": 200,
+        "wires": [
+            [
+                "cbeea803.5b8b08",
+                "266049e8.6818e6"
+            ]
+        ]
+    },
+    {
+        "id": "266049e8.6818e6",
+        "type": "ui_chart",
+        "z": "6c31748d.f5062c",
+        "name": "",
+        "group": "7e3538ea.9f6a18",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "20",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "outputs": 1,
+        "x": 510,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1ddf87f2.00dae8",
+        "type": "http response",
+        "z": "6c31748d.f5062c",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 330,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "44ca1da6.2307f4",
+        "type": "http in",
+        "z": "6c31748d.f5062c",
+        "name": "",
+        "url": "test",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 320,
+        "wires": [
+            [
+                "738e71b2.f838c",
+                "e85f9f0.8a5546"
+            ]
+        ]
+    },
+    {
+        "id": "738e71b2.f838c",
+        "type": "debug",
+        "z": "6c31748d.f5062c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 490,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "8ac7997b.7d1608",
+        "type": "ui_text",
+        "z": "6c31748d.f5062c",
+        "group": "f955b55f.675ce8",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "text",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 510,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "e85f9f0.8a5546",
+        "type": "function",
+        "z": "6c31748d.f5062c",
+        "name": "",
+        "func": "msg.payload= msg.payload.name\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 340,
+        "y": 360,
+        "wires": [
+            [
+                "8ac7997b.7d1608",
+                "3d663373.0abd4c"
+            ]
+        ]
+    },
+    {
+        "id": "3d663373.0abd4c",
+        "type": "ui_chart",
+        "z": "6c31748d.f5062c",
+        "name": "",
+        "group": "f955b55f.675ce8",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "20",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "outputs": 1,
+        "x": 510,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "eb1bb1b2.05a9f",
+        "type": "http response",
+        "z": "6c31748d.f5062c",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 330,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "7e3538ea.9f6a18",
+        "type": "ui_group",
+        "z": "",
+        "name": "POST",
+        "tab": "5492880a.9280f8",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "f955b55f.675ce8",
+        "type": "ui_group",
+        "z": "",
+        "name": "GET",
+        "tab": "5492880a.9280f8",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "5492880a.9280f8",
+        "type": "ui_tab",
+        "z": "",
+        "name": "HTTP",
+        "icon": "HTTP",
+        "disabled": false,
+        "hidden": false
+    }
+]
